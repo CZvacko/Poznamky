@@ -8,12 +8,14 @@ fc00::/7	Unique Local Address  / [ULA](https://en.wikipedia.org/wiki/Unique_loca
  > - Když se použije NAT, tak je lze routovat do internetu
 
 fe80::/10	Link Local Address / [LLA](https://en.wikipedia.org/wiki/Link-local_address) (v daném síťovém segmentu, neroutovatelné)  
+
 ::1/128		Loopback Address (localhost)  
+
   
 Zařízení může mít několik IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i na stejném interface (síťovce).  
   
 
-### Délka GUA prefixu (prefix lenght) který dostanu od ISP
+### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
 /64 - pro malé sítě, typicky domácnosti s jednou sítí  
 /56 - pro větší sítě (firmy), lze mít 256 podsítí.   
  > Taky lze rozdělit do /60s čímž získám 16 podsítí (např pro více samostatných routerů) kde každá bude mít 16 podsítí o délce /64 
