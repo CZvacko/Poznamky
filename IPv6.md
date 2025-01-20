@@ -1,15 +1,19 @@
 ### V [IPv6](https://en.wikipedia.org/wiki/IPv6) je více adresních rozsahů (Scopes) ve kterém se může dané zařízení (host) nacházet 
 
-2000::/3	Global Unique Address / GUA  (Internet) 
- > - Začínají na 2xxx  
+**2000::/3**	Global Unique Address / [GUA](https://www.geeksforgeeks.org/global-unicast-address-in-ccna/) (Internet)  
 
-fc00::/7	Unique Local Address  / [ULA](https://en.wikipedia.org/wiki/Unique_local_address) (v LAN za internetovou bránou, routovatelné pouze v privátních sítích)  
- > - Lze dělit na fd00::/8 a fc00::/8 (tento se ale v praxi nepoužívá)  
- > - Když se použije NAT, tak je lze routovat do internetu
+&nbsp;&nbsp;&nbsp;&nbsp;Adresy začínají na 2xxx a skládají se z těchto částí, např:  
+&nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}2001:0db8:abcd:}$$ $${\color{lightgreen}0000:}$$ $${\color{orange}a111:b222:c333:d444}$$  
+&nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}GlobalPrefix}$$ + $${\color{lightgreen}SubnetID}$$ + $${\color{orange}InterfaceID}$$
 
-fe80::/10	Link Local Address / [LLA](https://en.wikipedia.org/wiki/Link-local_address) (v daném síťovém segmentu, neroutovatelné)  
+**fc00::/7**	Unique Local Address  / [ULA](https://en.wikipedia.org/wiki/Unique_local_address) (v LAN za internetovou bránou, routovatelné pouze v privátních sítích)  
 
-::1/128		Loopback Address (localhost)  
+&nbsp;&nbsp;&nbsp;&nbsp;Lze dělit na fd00::/8 a fc00::/8 (tento se ale v praxi nepoužívá)  
+&nbsp;&nbsp;&nbsp;&nbsp;Když se použije NAT, tak je lze routovat do internetu
+
+**fe80::/10**	Link Local Address / [LLA](https://en.wikipedia.org/wiki/Link-local_address) (v daném síťovém segmentu, neroutovatelné)  
+
+**::1/128**		Loopback Address (localhost)  
 
   
 Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i vícero na stejném interface (síťovce).  
@@ -25,7 +29,7 @@ Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že
 Static - Fixní Adresy  
 [SLAAC](https://en.wikipedia.org/wiki/IPv6#Stateless_address_autoconfiguration_(SLAAC)) - Stateless Address Auto-Configuration (Adresa je generovaná hostem)  
 &nbsp;&nbsp;&nbsp;&nbsp;Kroky:  
-&nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje link-local adresu.  
+&nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje Link Local adresu - dříve dle MAC ale od toho se upouští  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení přes protokol ICMPv6 odešle Router Solicitation (RS)     
 &nbsp;&nbsp;&nbsp;&nbsp;Router odpoví Router Advertisement (RA) obsahující informaci o síťovém prefixu (jak GUA tak i ULA)  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení zkombinuje tento prefix s indentifikátorem jeho interface a získá tak plnou IPv6 adresu.  
