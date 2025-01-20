@@ -12,13 +12,13 @@ fe80::/10	Link Local Address / [LLA](https://en.wikipedia.org/wiki/Link-local_ad
 ::1/128		Loopback Address (localhost)  
 
   
-Zařízení může mít několik IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i na stejném interface (síťovce).  
+Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i vícero na stejném interface (síťovce).  
   
 
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
 /64 - pro malé sítě, typicky domácnosti s jednou sítí  
 /56 - pro větší sítě (firmy), lze mít 256 podsítí.   
- > Taky lze rozdělit do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každá bude mít 16 podsítí o délce /64 
+ > :bulb: Taky lze rozdělit do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každá bude mít 16 podsítí o délce /64 
 
   
 ### Metody přiřazení IPv6 Adres
@@ -26,16 +26,16 @@ Static - Fixní Adresy
 [SLAAC](https://en.wikipedia.org/wiki/IPv6#Stateless_address_autoconfiguration_(SLAAC)) - Stateless Address Auto-Configuration (Adresa je generovaná hostem)  
 &nbsp;&nbsp;&nbsp;&nbsp;Kroky:  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje link-local adresu.  
-&nbsp;&nbsp;&nbsp;&nbsp;Zařízení odešle Router Solicitation (RS).  
+&nbsp;&nbsp;&nbsp;&nbsp;Zařízení přes protokol ICMPv6 odešle Router Solicitation (RS)     
 &nbsp;&nbsp;&nbsp;&nbsp;Router odpoví Router Advertisement (RA) obsahující informaci o síťovém prefixu (jak GUA tak i ULA)  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení zkombinuje tento prefix s indentifikátorem jeho interface a získá tak plnou IPv6 adresu.  
 
  > Vyžaduje /64 adresní blok  
  
 [DHCPv6](https://en.wikipedia.org/wiki/DHCPv6) - Dynamic Host Configuration Protocol (Adresa je přiřazená DHCP serverem) 
- - Stateful DHCPv6: The DHCP server assigns IPv6 addresses and other configuration settings.
- - Stateless DHCPv6: The DHCP server provides additional configuration information (e.g., DNS servers) but not the IPv6 address itself, which is obtained through SLAAC.
+ - Stateful DHCPv6: DHCP server svým klientům přiřadí IPv6 adresu, prefix, bránu ale i ostatní info jako: dns, ntp.
+ - Stateless DHCPv6: Klienti si pomocí SLAAC sami získají IPv6 adresu, prefix, bránu ale ostatní jim dopošle DHCP server. Toto ale musí být oznámeno v rámci RA.
 
- > Toto nepodporují Chrome/Android zařízení  
+ > :warning:Toto nepodporují Chrome/Android zařízení  
  
 Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
