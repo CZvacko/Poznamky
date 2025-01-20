@@ -18,7 +18,7 @@ Zařízení může mít několik IPv6 adres z různých Scopes (očekává se ž
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
 /64 - pro malé sítě, typicky domácnosti s jednou sítí  
 /56 - pro větší sítě (firmy), lze mít 256 podsítí.   
- > Taky lze rozdělit do /60s čímž získám 16 podsítí (např pro více samostatných routerů) kde každá bude mít 16 podsítí o délce /64 
+ > Taky lze rozdělit do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každá bude mít 16 podsítí o délce /64 
 
   
 ### Metody přiřazení IPv6 Adres
@@ -26,7 +26,7 @@ Static - Fixní Adresy
 [SLAAC](https://en.wikipedia.org/wiki/IPv6#Stateless_address_autoconfiguration_(SLAAC)) - Stateless Address Auto-Configuration (Adresa je generovaná hostem)  
 &nbsp;&nbsp;&nbsp;&nbsp;Kroky:  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje link-local adresu.  
-&nbsp;&nbsp;&nbsp;&nbsp;Odešle Router Solicitation (RS).  
+&nbsp;&nbsp;&nbsp;&nbsp;Zařízení odešle Router Solicitation (RS).  
 &nbsp;&nbsp;&nbsp;&nbsp;Router odpoví Router Advertisement (RA) obsahující informaci o síťovém prefixu (jak GUA tak i ULA)  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení zkombinuje tento prefix s indentifikátorem jeho interface a získá tak plnou IPv6 adresu.  
 
