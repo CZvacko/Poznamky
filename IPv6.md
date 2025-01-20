@@ -37,6 +37,5 @@ Static - Fixní Adresy
  - Stateless DHCPv6: The DHCP server provides additional configuration information (e.g., DNS servers) but not the IPv6 address itself, which is obtained through SLAAC.
 
  > Toto nepodporují Chrome/Android zařízení  
-  
-DHCPv6-PD  
-DHCPv6-PD over PPPoE  
+ 
+Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
