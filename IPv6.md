@@ -16,7 +16,7 @@
 **::1/128**		Loopback Address (localhost)  
 
   
-Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i vícero na stejném interface (síťovce).  
+Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i několik v daném scope na stejném interface (síťovce).  
   
 
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
