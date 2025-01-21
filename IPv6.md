@@ -22,7 +22,7 @@ Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
 /64 - pro malé sítě, typicky domácnosti s jednou sítí  
 /56 - pro větší sítě (firmy), lze mít 256 podsítí.   
- > :bulb: Taky lze rozdělit do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každá bude mít 16 podsítí o délce /64 
+ > :bulb: Taky lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každý bude mít 16 podsítí o délce /64 
 
   
 ### Metody přiřazení IPv6 Adres
