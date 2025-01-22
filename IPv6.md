@@ -13,6 +13,8 @@
 
 **fe80::/10**	Link Local Address / [LLA](https://en.wikipedia.org/wiki/Link-local_address) (v daném síťovém segmentu, neroutovatelné)  
 
+&nbsp;&nbsp;&nbsp;&nbsp;Každé zařízení si ji vytvoří samo a to i v případě, že není v síti ipv6 nijak konfigurované  
+
 **::1/128**		Loopback Address (localhost)  
 
   
