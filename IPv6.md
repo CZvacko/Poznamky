@@ -45,3 +45,8 @@ Static - Fixní Adresy
  > :warning:Toto nepodporují Chrome/Android zařízení  
  
 Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
+
+
+### Testování
+[www.nebezi.cz](http://www.nebezi.cz) je server, který je dostupný pouze po IPv6  
+[ipv6-test.com](http://test-ipv6.com) další testy IPv6 konektivity (IPv4 tam celkem blbne)    
