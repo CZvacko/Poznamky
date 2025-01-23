@@ -1,4 +1,13 @@
-### V [IPv6](https://en.wikipedia.org/wiki/IPv6) je více adresních rozsahů (Scopes) ve kterém se může dané zařízení (host) nacházet 
+### Formát adresy  
+[IPv6](https://en.wikipedia.org/wiki/IPv6) adresa má 128 bitů a je zobrazena jako osm skupin čtyř hexadecimálních číslic oddělených dvojtečkami (tj. šestnáctková soustava). Prvních 64 bitů adresy je **Síťová část** která se využívá pro směrování síťového provozu. Zbývajících 64 bitů je **Hostitelská část** sloužících k identifikaci konkrétního rozhraní v síti.  
+
+Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat počáteční nuly. Pokud se vyskytne několik po sobě jdoucích nulových skupin, lze je nahradit dvojicí dvojteček. Ta se však v zápisu každé adresy smí objevit jen jednou, aby byl jednoznačný. Např:  
+2a02:0000:0000:0000:0000:0000:0000:0101  
+2a02:0:0:0:0:0:0:101  
+2a02::101  
+
+
+### V IPv6 je více adresních rozsahů (Scopes) ve kterém se může dané zařízení (host) nacházet 
 
 **2000::/3**	Global Unique Address / [GUA](https://www.geeksforgeeks.org/global-unicast-address-in-ccna/) (Internet)  
 
