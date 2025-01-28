@@ -59,3 +59,7 @@ Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Pre
 ### Testování
 [www.nebezi.cz](http://www.nebezi.cz) je server, který je dostupný pouze po IPv6  
 [ipv6-test.com](http://test-ipv6.com) další testy IPv6 konektivity, umí i opingovat zařízení zpět a ověřit tak funkci firewalu (přes IPv4 only celkem blbne)    
+
+### Veřejné DNS servery  
+[cloudflare](https://developers.cloudflare.com/1.1.1.1/ip-addresses/)  
+[google](https://developers.google.com/speed/public-dns/docs/using)  
