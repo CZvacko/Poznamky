@@ -13,7 +13,7 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 
 &nbsp;&nbsp;&nbsp;&nbsp;Adresy začínají na 2xxx a skládají se z těchto částí, např:  
 &nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}2001:0db8:abcd:}$$ $${\color{lightgreen}0000:}$$ $${\color{orange}a111:b222:c333:d444}$$  
-&nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}GlobalPrefix}$$ + $${\color{lightgreen}SubnetID}$$ + $${\color{orange}InterfaceID}$$
+&nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}GlobalPrefix}$$ + $${\color{lightgreen}SubnetID}$$ + $${\color{orange}InterfaceID(zařízení)}$$
 
 **fc00::/7**	Unique Local Address  / [ULA](https://en.wikipedia.org/wiki/Unique_local_address) (v LAN za internetovou bránou, routovatelné pouze v privátních sítích)  
 
@@ -27,7 +27,7 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 **::1/128**		Loopback Address (localhost)  
 
   
-Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že ve všech), dokonce i několik v daném scope na stejném interface (síťovce).  
+Zařízení může mít vícero IPv6 adres z různých Scopes (běžný windows klient má GUA+LLA+localhost), dokonce i několik v daném scope na stejném interface (síťovce).  
   
 
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
