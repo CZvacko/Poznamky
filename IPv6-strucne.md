@@ -52,7 +52,9 @@ Static - Fixní Adresy
  - Stateful DHCPv6: DHCP server svým klientům přiřadí IPv6 adresu, prefix, bránu ale i ostatní info jako: dns, ntp.
  - Stateless DHCPv6: Klienti si pomocí SLAAC sami získají IPv6 adresu, prefix, bránu ale ostatní jim dopošle DHCP server. Toto ale musí být oznámeno v rámci RA.
 
- > :warning:Toto nepodporují Chrome/Android zařízení  
+ > :warning:Toto nepodporují Chrome/Android zařízení
+
+ > :warning:Pozor při pokusech s routerem a použitím windows 11 klienta, ten když dostane IP přes SLAAC a pak přepnete Router Advertisement mode, tak může DHCP ignorovat, pomůže restart.  
  
 Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
 
