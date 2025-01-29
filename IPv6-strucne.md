@@ -35,6 +35,7 @@ Zařízení může mít vícero IPv6 adres z různých Scopes (očekává se že
 /56 - pro větší sítě (firmy), lze mít 256 podsítí.   
  > :bulb: Taky lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každý bude mít 16 podsítí o délce /64 
 
+U firemních linek může dostat i prefix délky /53 nebo i jiné, záleží na daném ISP.
   
 ### Metody přiřazení IPv6 Adres
 Static - Fixní Adresy  
@@ -60,6 +61,8 @@ Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Pre
 [www.nebezi.cz](http://www.nebezi.cz) je server, který je dostupný pouze po IPv6  
 [ipv6-test.com](http://test-ipv6.com) další testy IPv6 konektivity, umí i opingovat zařízení zpět a ověřit tak funkci firewalu (přes IPv4 only celkem blbne)    
 
-### Veřejné DNS servery  
-[cloudflare](https://developers.cloudflare.com/1.1.1.1/ip-addresses/)  
-[google](https://developers.google.com/speed/public-dns/docs/using)  
+### IPv6 adresy veřejných DNS serverů
+[cloudflare](https://developers.cloudflare.com/1.1.1.1/ip-addresses/) - mají i varianty které umí blokovat malware   
+[quad9](https://www.quad9.net/service/service-addresses-and-features) - mají i varianty které umí blokovat malware   
+[opendns](https://support.opendns.com/hc/en-us/articles/227986667-Does-OpenDNS-Support-IPv6)  
+
