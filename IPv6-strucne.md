@@ -27,7 +27,7 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 **::1/128**		Loopback Address (localhost)  
 
   
-Zařízení může mít vícero IPv6 adres z různých Scopes (běžný windows klient má GUA+LLA+localhost), dokonce i několik v daném scope na stejném interface (síťovce).  
+Zařízení může mít vícero IPv6 adres z různých Scopes (běžný windows klient má GUA nebo ULA a LLA a localhost), dokonce i několik adres v daném scope na stejném interface (síťovce).  
   
 
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
