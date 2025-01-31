@@ -7,7 +7,7 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 2a02::101  
 
 
-### V IPv6 je více adresních rozsahů (Scopes) ve kterém se může dané zařízení (host) nacházet 
+### V IPv6 je více adresních rozsahů (Scopes) ve kterém se může dané zařízení nacházet 
 
 **2000::/3**	Global Unique Address / [GUA](https://www.geeksforgeeks.org/global-unicast-address-in-ccna/) (Internet)  
 
