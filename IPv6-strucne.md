@@ -74,3 +74,7 @@ Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Pre
 [quad9](https://www.quad9.net/service/service-addresses-and-features) - mají i varianty které umí blokovat malware   
 [opendns](https://support.opendns.com/hc/en-us/articles/227986667-Does-OpenDNS-Support-IPv6)  
 
+### Odlišnosti oproti IPv4
+NAT už není důvod používat, kromě sítí kde router využívá Multi-WAN, je zde více variant:  
+&nbsp;&nbsp;&nbsp;&nbsp; [NPTv6](https://en.wikipedia.org/wiki/IPv6-to-IPv6_Network_Prefix_Translation)  Obdoba IPv4 1:1 NAT, [překládá](https://docs.netgate.com/pfsense/en/latest/nat/npt.html) prefix na jiný.  
+&nbsp;&nbsp;&nbsp;&nbsp; [NAT66](https://blog.apnic.net/2018/02/02/nat66-good-bad-ugly/)   
