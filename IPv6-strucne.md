@@ -80,3 +80,5 @@ Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Pre
 NAT už není důvod používat, kromě sítí kde router využívá Multi-WAN, je zde více variant:  
 &nbsp;&nbsp;&nbsp;&nbsp; [NPTv6](https://en.wikipedia.org/wiki/IPv6-to-IPv6_Network_Prefix_Translation)  Obdoba IPv4 1:1 NAT, [překládá](https://docs.netgate.com/pfsense/en/latest/nat/npt.html) prefix na jiný.  
 &nbsp;&nbsp;&nbsp;&nbsp; [NAT66](https://blog.apnic.net/2018/02/02/nat66-good-bad-ugly/)   
+ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.org/wiki/Neighbor_Discovery_Protocol)  
+&nbsp;&nbsp;&nbsp;&nbsp; Ve windows zle zobrazit seznam pomocí *netsh interface ipv6 show neighbors* nebo *Get-NetNeighbour*  
