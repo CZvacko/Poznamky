@@ -12,8 +12,8 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 **2000::/3**	Global Unique Address / [GUA](https://www.geeksforgeeks.org/global-unicast-address-in-ccna/) (Internet)  
 
 &nbsp;&nbsp;&nbsp;&nbsp;Adresy začínají na 2xxx a skládají se z těchto částí, např:  
-&nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}2001:0db8:abcd:}$$ $${\color{lightgreen}0000:}$$ $${\color{orange}a111:b222:c333:d444}$$  
-&nbsp;&nbsp;&nbsp;&nbsp; $${\color{lightblue}GlobalPrefix}$$ + $${\color{lightgreen}SubnetID}$$ + $${\color{orange}InterfaceID(zařízení)}$$
+&nbsp;&nbsp;&nbsp;&nbsp; **2001:0db8:abcd:** 0000: **a111:b222:c333:d444**  
+&nbsp;&nbsp;&nbsp;&nbsp; **GlobalPrefix** + SubnetID + **Host(zařízení)**
 
 **fc00::/7**	Unique Local Address  / [ULA](https://en.wikipedia.org/wiki/Unique_local_address) (v LAN za internetovou bránou, routovatelné pouze v privátních sítích)  
 
