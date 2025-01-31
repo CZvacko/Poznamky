@@ -13,7 +13,7 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 
 &nbsp;&nbsp;&nbsp;&nbsp;Adresy začínají na 2xxx a skládají se z těchto částí, např:  
 &nbsp;&nbsp;&nbsp;&nbsp; **2001:0db8:abcd:** 0000: **a111:b222:c333:d444**  
-&nbsp;&nbsp;&nbsp;&nbsp; **GlobalPrefix** + SubnetID + **Host(zařízení)**
+&nbsp;&nbsp;&nbsp;&nbsp; **GlobalPrefix** + SubnetID + **Interface ID**
 
 **fc00::/7**	Unique Local Address  / [ULA](https://en.wikipedia.org/wiki/Unique_local_address) (v LAN za internetovou bránou, routovatelné pouze v privátních sítích)  
 
@@ -22,7 +22,13 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 
 **fe80::/10**	Link Local Address / [LLA](https://en.wikipedia.org/wiki/Link-local_address) (v daném síťovém segmentu, neroutovatelné)  
 
-&nbsp;&nbsp;&nbsp;&nbsp;Každé zařízení si ji vytvoří samo a to i v případě, že není v síti ipv6 nijak konfigurované  
+&nbsp;&nbsp;&nbsp;&nbsp;Unicast adresy začínají na fe80 a skládají se z těchto částí, např:  
+&nbsp;&nbsp;&nbsp;&nbsp; **fe80** &nbsp; :: &nbsp; **9124:9085:90f6:6411** *%5*  
+&nbsp;&nbsp;&nbsp;&nbsp; **GlobalPrefix** + SubnetID(nuly) + **Interface ID** + *Zone index*  
+&nbsp;&nbsp;&nbsp;&nbsp; *Zone index* označuje danou síťovku, aby OS věděl kam posílat packety.  
+&nbsp;&nbsp;&nbsp;&nbsp; Jeho formát se ale může lišit dle OS, ukázka výše platí pro Windows.  
+
+ > :bulb: Každé zařízení si ji vytvoří samo a to i v případě, že ipv6 není v síti nijak konfigurované  
 
 **::1/128**		Loopback Address (localhost)  
 
