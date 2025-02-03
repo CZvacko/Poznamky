@@ -82,5 +82,5 @@ NAT už není důvod používat, kromě sítí kde router využívá Multi-WAN, 
 &nbsp;&nbsp;&nbsp;&nbsp; [NAT66](https://blog.apnic.net/2018/02/02/nat66-good-bad-ugly/)   
 ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.org/wiki/Neighbor_Discovery_Protocol)  
 &nbsp;&nbsp;&nbsp;&nbsp; Ve windows zle zobrazit seznam pomocí *netsh interface ipv6 show neighbors* nebo *Get-NetNeighbour*  
-&nbsp;&nbsp;&nbsp;&nbsp; Na začátku seznamu bude vypsán (Router) a může mít 2 adresy.  
+&nbsp;&nbsp;&nbsp;&nbsp; Pokud je na routeru správně nakonfigurované RA, tak na začátku seznamu bude vypsán (Router) a může mít 2 adresy.  
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud zrovna probíhala komunikace do internetu (např. ping) pak Type má být *Reachable*, jestli je *Stale* nebo jiné, tak to znamená problém.  
