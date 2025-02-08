@@ -39,10 +39,12 @@ Běžný windows klient by měl mít GUA nebo ULA a pak vždy LLA + localhost.
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
 /64 - pro malé sítě, typicky domácnosti s jednou sítí - nejhorší varianta  
 /60 - slušný ISP, lze mít 16 podsítí délky /64  
-/56 - pro větší sítě (firmy), lze mít 256 podsítí délky /64   
- > :bulb: Taky lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) do /60 čímž získám 16 podsítí (např pro více samostatných routerů) kde každý může mít 16 podsítí o délce /64 
+/56 - pro větší sítě (firmy), lze mít 256 podsítí délky /64  
+/48 - velmi štedrý ISP  
 
 U firemních linek lze dostat i prefix délky /53 nebo i jiné, záleží na daném ISP.
+
+ > :bulb: Přidělené prefixy lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) např. /56 do /60 čímž získám 16 podsítí (pro více routerů) kde každý může mít 16 podsítí o délce /64  
   
 ### Metody přiřazení IPv6 Adres
 Static - Fixní Adresy  
