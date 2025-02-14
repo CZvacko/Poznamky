@@ -44,7 +44,7 @@ Běžný windows klient by měl mít GUA nebo ULA a pak vždy LLA + localhost.
 
 U firemních linek lze dostat i prefix délky /53 nebo i jiné, záleží na daném ISP.
 
- > :bulb: Přidělené prefixy lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) např. /56 do /60 čímž získám 16 podsítí (pro více routerů) kde každý může mít 16 podsítí o délce /64  
+ > :bulb: Přidělené prefixy lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) např. /56 do /60 čímž získám 16 podsítí (pro více routerů) kde každý může mít 16 podsítí o délce /64.  Lze si to spočítat i ručně: [56 do 60](/IPv6/Obrazky/Rozdelim56do60.jpg) nebo [60 do 62](/IPv6/Obrazky/Rozdelim60do62.jpg)
   
 ### Metody přiřazení IPv6 Adres
 Static - Fixní Adresy  
