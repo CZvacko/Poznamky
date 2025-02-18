@@ -65,7 +65,7 @@ Static - Fixní Adresy
 
  > :warning:Toto nepodporují Chrome/Android zařízení
 
- > :warning:Pozor při pokusech s routerem a použitím windows 11 klienta, ten když dostane IP přes SLAAC a pak přepnete Router Advertisement mode, tak může DHCP ignorovat, pomůže restart.  
+ > :warning:Pozor při pokusech s routerem a použitím windows 11 klienta, ten když dostane IPv6 (a už jedno jestli přes SLAAC nebo DHCP) a pak přepnete Router Advertisement mode popř změníte nastavení DHCP, tak toto může klient ignorovat (odpojení kabelu nabo ipconfig /renew nemá vliv), pomůže restart.  
  
 Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
 
