@@ -34,7 +34,7 @@ Zápis lze zkrátit tak, že lze v jednotlivých čtveřicích vynechávat poč�
 
   
 Zařízení může mít vícero IPv6 adres z různých Scopes, dokonce i několik adres v daném scope na stejném interface (síťovce).  
-Běžný windows klient by měl mít GUA nebo ULA a pak vždy LLA + localhost.  
+Běžný [windows klient](/IPv6/IPv6-WinKlient.md) by měl mít GUA nebo ULA a pak vždy LLA + localhost.  
 
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
 /64 - pro malé sítě, typicky domácnosti s jednou sítí - nejhorší varianta  
@@ -65,7 +65,7 @@ Static - Fixní Adresy
 
  > :warning:Toto nepodporují Chrome/Android zařízení
 
- > :warning:Pozor při pokusech s routerem a použitím windows 11 klienta, ten když dostane IPv6 (a už jedno jestli přes SLAAC nebo DHCP) a pak přepnete Router Advertisement mode popř změníte nastavení DHCP, tak toto může klient ignorovat (odpojení kabelu nabo ipconfig /renew nemá vliv), pomůže restart.  
+ > :warning:Pozor při pokusech s routerem a použitím windows 11 klienta, ten když dostane IPv6 (a už jedno jestli přes SLAAC nebo DHCP) a pak přepnete Router Advertisement mode popř změníte nastavení DHCP, tak toto může klient ignorovat (po přepojení síťovky), pomůže [ipconfig /renew6](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig) nebo restart OS.  
  
 Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
 
