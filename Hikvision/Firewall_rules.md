@@ -1,4 +1,4 @@
-### Ports used for incoming traffic (to manage device) 
+### Ports used for incoming traffic (to manage camera) 
 
 | state     | protocol | port number | description      |
 |-----------|----------|-------------|------------------|
