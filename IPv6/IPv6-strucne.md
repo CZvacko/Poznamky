@@ -46,6 +46,8 @@ U firemních linek lze dostat i prefix délky /53 nebo i jiné, záleží na dan
 
  > :bulb: Přidělené prefixy lze [rozdělit](https://subnettingpractice.com/ipv6-subnet-calculator.html) např. /56 do /60 čímž získám 16 podsítí (pro více routerů) kde každý může mít 16 podsítí o délce /64.  Lze si to spočítat i ručně: [56 do 60](/IPv6/Obrazky/Rozdelim56do60.jpg) nebo [60 do 62](/IPv6/Obrazky/Rozdelim60do62.jpg)
   
+ > :bulb: Ve statické (firemní) konfiguraci se může stát, že pro WAN dostanete další malý /64 GUA prefix, který bude sloužit jen jako "spojovací síť"  
+  
 ### Metody přiřazení IPv6 Adres
 Static - Fixní Adresy  
 [SLAAC](https://en.wikipedia.org/wiki/IPv6#Stateless_address_autoconfiguration_(SLAAC)) - Stateless Address Auto-Configuration (Adresa je generovaná hostem)  
