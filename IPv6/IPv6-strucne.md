@@ -72,9 +72,10 @@ Static - Fixní Adresy
 Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
 
 
-### Testování
+### Testování, užitečné odkazy 
 [www.nebezi.cz](http://www.nebezi.cz) je server, který je dostupný pouze po IPv6  
-[ipv6-test.com](http://test-ipv6.com) další testy IPv6 konektivity, umí i opingovat zařízení zpět a ověřit tak funkci firewalu (přes IPv4 only někdy blbne)    
+[test-ipv6.com](http://test-ipv6.com) další testy IPv6 konektivity, umí i opingovat zařízení zpět a ověřit tak funkci firewalu (přes IPv4 only někdy blbne)  
+[ping](https://dnschecker.org/ping-ipv6.php) z externího serveru  
 
 ### IPv6 adresy veřejných DNS serverů
 [cloudflare](https://developers.cloudflare.com/1.1.1.1/ip-addresses/) - mají i varianty které umí blokovat malware   
@@ -90,7 +91,4 @@ ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.or
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud je na routeru správně nakonfigurované RA, tak na začátku seznamu bude vypsán (Router) a může mít 2 adresy.  
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud zrovna probíhala komunikace do internetu (např. ping) pak State má být [Reachable](https://www.rfc-editor.org/rfc/rfc4861.html#section-7.3.2), jestli je *Stale* nebo jiné, tak to znamená problém.  
 
-### Užitečné odkazy  
-[Ping](https://dnschecker.org/ping-ipv6.php) z externího serveru  
-  
 ### Problémy s IPv6  
