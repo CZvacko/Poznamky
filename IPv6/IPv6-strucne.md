@@ -91,5 +91,6 @@ ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.or
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud zrovna probíhala komunikace do internetu (např. ping) pak State má být [Reachable](https://www.rfc-editor.org/rfc/rfc4861.html#section-7.3.2), jestli je *Stale* nebo jiné, tak to znamená problém.  
 
 ### Užitečné odkazy  
+[Ping](https://dnschecker.org/ping-ipv6.php) z externího serveru  
   
 ### Problémy s IPv6  
