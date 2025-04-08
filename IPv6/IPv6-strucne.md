@@ -93,6 +93,6 @@ ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.or
 
 ### Problémy s IPv6  
 
-**dd-wrt**: nemá ve výchozím nastavení IPv6 zaplé a musí se docela komplikovaně [nastavovat](https://wiki.dd-wrt.com/wiki/index.php/IPV6) a když je potřeba udělat statickou IPv6 konfiguraci, tak to je ještě větší problém. Radši dané AP přeflashujte na [open-wrt](https://openwrt.org) tam je to ve výchozím stavu zaplé a funkční, taky má více možností nastavení (přes GUI/LUCI).  
+**dd-wrt**: nemá ve výchozím nastavení IPv6 zaplé a musí se docela komplikovaně [nastavovat](https://wiki.dd-wrt.com/wiki/index.php/IPV6) a když je potřeba udělat statickou IPv6 konfiguraci, tak to je ještě větší problém. Radši dané AP [přeflashujte](/IPv6/OpenWrt-flash.md) na [open-wrt](https://openwrt.org) tam je to ve výchozím stavu zaplé, taky má více možností nastavení (přes GUI/LUCI).  
 
 
