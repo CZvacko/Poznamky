@@ -60,8 +60,8 @@ Static - Fixní Adresy
  > Vyžaduje /64 adresní blok  
  
 [DHCPv6](https://en.wikipedia.org/wiki/DHCPv6) - Dynamic Host Configuration Protocol (Adresa je přiřazená DHCP serverem) 
- - Stateful DHCPv6: DHCP server svým klientům přiřadí IPv6 adresu, ~~bránu~~ ale i ostatní info jako: dns, ntp, netboot.
- - Stateless DHCPv6: Klienti si pomocí SLAAC sami získají IPv6 adresu, ~~bránu~~ ale ostatní jim dopošle DHCP server. Toto ale musí být oznámeno v rámci RA.
+ - Stateful DHCPv6: DHCP server svým klientům přiřadí IPv6 adresu, ~~bránu~~ ale i ostatní info jako: dns, ntp, netboot, domain name. Lze dělat rezervace adres. 
+ - Stateless DHCPv6: Klienti si pomocí SLAAC sami získají IPv6 adresu, ~~bránu~~ ale ostatní info jako: dns, ntp, netboot, domain name jim dopošle DHCP server. Toto ale musí být oznámeno v rámci RA. Na síti pak není žádný server, který má přehled o použitých/volných adresách a nelze tudíž dělat rezervace adres.
 
  > :bulb: Bránu DHCPv6 nesděluje, to dělá router sám v rámci funkce Router Advertisement 
 
