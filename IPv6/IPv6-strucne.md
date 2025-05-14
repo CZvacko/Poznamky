@@ -52,8 +52,8 @@ U firemních linek lze dostat i prefix délky /53 nebo i jiné, záleží na dan
 Static - Fixní Adresy  
 [SLAAC](https://en.wikipedia.org/wiki/IPv6#Stateless_address_autoconfiguration_(SLAAC)) - Stateless Address Auto-Configuration (Adresa je generovaná hostem)  
 &nbsp;&nbsp;&nbsp;&nbsp;Kroky:  
-&nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje Link Local adresu - dříve dle MAC ale od toho se upouští  
-&nbsp;&nbsp;&nbsp;&nbsp;Zařízení přes protokol ICMPv6 odešle Router Solicitation (RS)     
+&nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje Link Local adresu - dříve dle MAC tj [EUI-64 metoda](https://www.geeksforgeeks.org/ipv6-eui-64-extended-unique-identifier/) ale od toho se upouští a mělo by se používat Random Interface Identifier  
+&nbsp;&nbsp;&nbsp;&nbsp;Zařízení přes protokol ICMPv6 odešle Router Solicitation (RS)  
 &nbsp;&nbsp;&nbsp;&nbsp;Router odpoví Router Advertisement (RA) obsahující informaci o síťovém prefixu (jak GUA tak i ULA)  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení zkombinuje tento prefix s indentifikátorem jeho interface a získá tak plnou IPv6 adresu.  
 
