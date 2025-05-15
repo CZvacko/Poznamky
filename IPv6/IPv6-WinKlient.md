@@ -101,7 +101,7 @@ Lze měnit dané hodnoty a nebo toto úplně vypnout:
 *netsh interface ipv6 set privacy state=disabled store=active*  
 *netsh interface ipv6 set privacy state=disabled store=persistent*  
 
-Nebo pomocí příkazu *Set-NetIPv6Protocol -UseTemporaryAddresses Enabled*  
+Nebo pomocí příkazu *Set-NetIPv6Protocol -UseTemporaryAddresses Disabled*  
 Zároveň by se mělo vypnout toto:  
 
 ### Způsob generování GUA adresy ve SLAAC metodě  
