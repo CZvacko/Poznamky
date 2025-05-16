@@ -95,5 +95,5 @@ ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.or
 
 **dd-wrt**: nemá ve výchozím nastavení IPv6 zaplé a musí se docela komplikovaně [nastavovat](https://wiki.dd-wrt.com/wiki/index.php/IPV6) a když je potřeba udělat statickou IPv6 konfiguraci, tak to je ještě větší problém. Radši dané AP [přeflashujte](/IPv6/OpenWrt-flash.md) na [open-wrt](https://openwrt.org) tam je to ve výchozím stavu zaplé a dobře implementované, taky má více možností [nastavení](/IPv6/OpenWrt-nastaveni.md) (přes GUI/LUCI).  
   
-**Samostatné routery**: ISP má standardně nastaven routing jen na jeden zákaznický router, to pak komplikuje [situaci](/IPv6/SamostatneRoutery.md) kdy chcete zachovat IPv4 infrastrukturu neměnou.  
+**Samostatné routery**: ISP má standardně nastaven routing jen na jeden zákaznický router, to pak komplikuje [situaci](/IPv6/SamostatneRoutery.md) kdy chcete zachovat IPv4 infrastrukturu s více routery neměnou.  
 
