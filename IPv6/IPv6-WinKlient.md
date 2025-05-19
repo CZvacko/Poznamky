@@ -82,8 +82,8 @@ LLA>Link-local IPv6 Address . . . . . : fe80::9124:9085:90f6:6411%5(Preferred)
 :bulb: Localhost adresa se standardně neukazuje, lze ji zobrazit přes příkaz **route print**  
 
 ### Dočasná GUA adresa  
-Ve windows je funkce která k trvalé GUA adrese generuje i dočasnou GUA, která má sloužit jako ochrana soukromí uživatele. Taková adresa má životnost standadně 7 dní, pak se vygeneruje nová (pak nelze uživatele na webu sledovat dle jeho adresy). Ta se označuje jako "Temporary IPv6 Address" a měla by se používat jen pro odchozí spojení. 
-Toto bývá standardně zapnuto a stav lze ověřit pomocí příkazu *netsh interface ipv6 show privacy* nebo *get-netipv6protocol*
+Ve windows je funkce, která k trvalé GUA adrese generuje i dočasnou GUA, která má sloužit jako ochrana soukromí uživatele. Taková adresa má životnost standadně 7 dní, pak se vygeneruje nová (pak nelze uživatele na webu sledovat dle jeho adresy). Ta se označuje jako "Temporary IPv6 Address" a měla by se používat jen pro odchozí spojení. 
+Toto bývá standardně zapnuto (avšak použije se pouze když je na routeru aktivní SLAAC) a stav lze ověřit pomocí příkazu *netsh interface ipv6 show privacy* nebo *get-netipv6protocol*
 ```console
 Querying active state...  
   
@@ -102,6 +102,7 @@ Lze měnit dané hodnoty a nebo toto úplně vypnout:
 *netsh interface ipv6 set privacy state=disabled store=persistent*  
 
 Nebo pomocí příkazu *Set-NetIPv6Protocol -UseTemporaryAddresses Disabled*  
+Poté *restart OS*  
 Zároveň by se mělo vypnout toto:  
 
 ### Způsob generování GUA adresy ve SLAAC metodě  
