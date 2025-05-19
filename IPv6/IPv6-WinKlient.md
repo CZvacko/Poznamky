@@ -111,3 +111,4 @@ Dříve se hostitelská část GUA adresy (Interface ID) generovalo dle MAC adre
 *netsh interface ipv6 set global randomizeidentifiers=disabled store=persistent*  
   
 Nebo pomocí příkazu *Set-NetIPv6Protocol -RandomizeIdentifiers Disabled*  
+Není potřeba restart OS, jen se znovu připojit k síti.  
