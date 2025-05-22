@@ -1,31 +1,5 @@
-### Windows klient s GUA adresou
-```console
-Ethernet adapter Ethernet:  
-
-    Connection-specific DNS Suffix  . : MyNet  
-    Description . . . . . . . . . . . : Realtek(R) PCI(e) Ethernet Controller  
-    Physical Address. . . . . . . . . : 40-16-7E-A9-97-CA  
-    DHCP Enabled. . . . . . . . . . . : Yes  
-    Autoconfiguration Enabled . . . . : Yes  
-GUA>IPv6 Address. . . . . . . . . . . : 2a02:1070:100f:2100::5000(Preferred)  
-    Lease Obtained. . . . . . . . . . : 03 March 2025 10:45:06  
-    Lease Expires . . . . . . . . . . : 03 March 2025 12:45:06  
-LLA>Link-local IPv6 Address . . . . . : fe80::9124:9085:90f6:6411%5(Preferred)  
-    IPv4 Address. . . . . . . . . . . : 10.90.1.11(Preferred)  
-    Subnet Mask . . . . . . . . . . . : 255.255.255.0  
-    Lease Obtained. . . . . . . . . . : 03 March 2025 10:45:05  
-    Lease Expires . . . . . . . . . . : 03 March 2025 12:45:05  
-    Default Gateway . . . . . . . . . : fe80::f6ec:38ff:fe80:e074%5  
-                                        10.90.1.1  
-    DHCP Server . . . . . . . . . . . : 10.90.1.1  
-    DHCPv6 IAID . . . . . . . . . . . : 88086142  
-    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2B-C8-8B-9F-40-16-7E-A9-97-CA  
-    DNS Servers . . . . . . . . . . . : 2a02:1070:100f:2100::1  
-                                        10.90.1.1  
-    NetBIOS over Tcpip. . . . . . . . : Enabled  
-```
-### Windows klient s vícero GUA adres (výchozí nastavení v OpenWrt)  
-První GUA přiřadí OpenWrt v rámci DHCPv6 metody, další v rámci SLAAC metody a "Temporary" si vygeneruje OS dle jeho aktuálního nastavení (viz popis níže).  
+### Windows klient s vícero GUA adres (bežný stav)  
+První GUA se přiřadí za pomocí DHCPv6 metody (tu pak lze vidět DHCP leases), další v rámci SLAAC metody a "Temporary" si vygeneruje OS dle jeho aktuálního nastavení (viz popis níže).  
 ```console
 Ethernet adapter Ethernet:  
 
@@ -53,7 +27,35 @@ LLA>Link-local IPv6 Address . . . . . : fe80::9124:9085:90f6:6411%5(Preferred)
                                         10.90.1.1  
     NetBIOS over Tcpip. . . . . . . . : Enabled  
 ```
-### Windows klient s ULA adresou
+### Windows klient s jedinou GUA adresou  
+Na síti je aktivní jen DHCPv6, bez SLAAC a nebo je délka prefixu jiná než 64 - to pak SLAAC nefunguje.  
+```console
+Ethernet adapter Ethernet:  
+
+    Connection-specific DNS Suffix  . : MyNet  
+    Description . . . . . . . . . . . : Realtek(R) PCI(e) Ethernet Controller  
+    Physical Address. . . . . . . . . : 40-16-7E-A9-97-CA  
+    DHCP Enabled. . . . . . . . . . . : Yes  
+    Autoconfiguration Enabled . . . . : Yes  
+GUA>IPv6 Address. . . . . . . . . . . : 2a02:1070:100f:2100::5000(Preferred)  
+    Lease Obtained. . . . . . . . . . : 03 March 2025 10:45:06  
+    Lease Expires . . . . . . . . . . : 03 March 2025 12:45:06  
+LLA>Link-local IPv6 Address . . . . . : fe80::9124:9085:90f6:6411%5(Preferred)  
+    IPv4 Address. . . . . . . . . . . : 10.90.1.11(Preferred)  
+    Subnet Mask . . . . . . . . . . . : 255.255.255.0  
+    Lease Obtained. . . . . . . . . . : 03 March 2025 10:45:05  
+    Lease Expires . . . . . . . . . . : 03 March 2025 12:45:05  
+    Default Gateway . . . . . . . . . : fe80::f6ec:38ff:fe80:e074%5  
+                                        10.90.1.1  
+    DHCP Server . . . . . . . . . . . : 10.90.1.1  
+    DHCPv6 IAID . . . . . . . . . . . : 88086142  
+    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2B-C8-8B-9F-40-16-7E-A9-97-CA  
+    DNS Servers . . . . . . . . . . . : 2a02:1070:100f:2100::1  
+                                        10.90.1.1  
+    NetBIOS over Tcpip. . . . . . . . : Enabled  
+```
+### Windows klient s jedinou ULA adresou
+Na síti je aktivní jen DHCPv6, bez SLAAC a nebo je délka prefixu jiná než 64 - to pak SLAAC nefunguje.
 ```console
 Ethernet adapter Ethernet:  
 
