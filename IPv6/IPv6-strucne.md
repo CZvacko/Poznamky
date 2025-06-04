@@ -90,7 +90,7 @@ ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.or
 &nbsp;&nbsp;&nbsp;&nbsp; Ve windows zle zobrazit seznam pomocí *netsh interface ipv6 show neighbors* nebo [Get-NetNeighbor](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netneighbor?view=windowsserver2025-ps)  
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud je na routeru správně nakonfigurované RA, tak na začátku seznamu bude vypsán (Router) a může mít 2 adresy.  
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud zrovna probíhala komunikace do internetu (např. ping) pak State má být [Reachable](https://www.rfc-editor.org/rfc/rfc4861.html#section-7.3.2), jestli je *Stale* nebo jiné, tak to znamená problém. 
-URL s IPv6 se do prohlížeče zadává jako https://[2a02:123:45::101]  
+URL s IPv6 se do prohlížeče zadává jako https://[2a02:123:45::101] a pokud je potřeba specifikovat port tak jako https://[2a02:123:45::101]:1443  
 
 ### Problémy s IPv6  
 
