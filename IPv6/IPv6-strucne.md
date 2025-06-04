@@ -54,7 +54,7 @@ Static - Fixní Adresy
 &nbsp;&nbsp;&nbsp;&nbsp;Kroky:  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení vygeneruje Link Local adresu - dříve dle MAC tj [EUI-64 metoda](https://www.geeksforgeeks.org/ipv6-eui-64-extended-unique-identifier/) ale od toho se upouští a mělo by se používat Random Interface Identifier  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení přes protokol ICMPv6 odešle Router Solicitation (RS)  
-&nbsp;&nbsp;&nbsp;&nbsp;Router odpoví Router Advertisement (RA) obsahující informaci o síťovém prefixu (jak GUA tak i ULA)  
+&nbsp;&nbsp;&nbsp;&nbsp;Router odpoví Router Advertisement (RA) obsahující informaci o síťovém prefixu (GUA nebo ULA)  
 &nbsp;&nbsp;&nbsp;&nbsp;Zařízení zkombinuje tento prefix s indentifikátorem jeho interface a získá tak plnou IPv6 adresu.  
 
  > Vyžaduje /64 adresní blok  
@@ -89,7 +89,8 @@ NAT už není důvod používat, kromě sítí kde router využívá Multi-WAN, 
 ARP v IPv6 nahrazuje [Neighbor Discovery Protocol (NDP)](https://cs.wikipedia.org/wiki/Neighbor_Discovery_Protocol)  
 &nbsp;&nbsp;&nbsp;&nbsp; Ve windows zle zobrazit seznam pomocí *netsh interface ipv6 show neighbors* nebo [Get-NetNeighbor](https://learn.microsoft.com/en-us/powershell/module/nettcpip/get-netneighbor?view=windowsserver2025-ps)  
 &nbsp;&nbsp;&nbsp;&nbsp; Pokud je na routeru správně nakonfigurované RA, tak na začátku seznamu bude vypsán (Router) a může mít 2 adresy.  
-&nbsp;&nbsp;&nbsp;&nbsp; Pokud zrovna probíhala komunikace do internetu (např. ping) pak State má být [Reachable](https://www.rfc-editor.org/rfc/rfc4861.html#section-7.3.2), jestli je *Stale* nebo jiné, tak to znamená problém.  
+&nbsp;&nbsp;&nbsp;&nbsp; Pokud zrovna probíhala komunikace do internetu (např. ping) pak State má být [Reachable](https://www.rfc-editor.org/rfc/rfc4861.html#section-7.3.2), jestli je *Stale* nebo jiné, tak to znamená problém. 
+URL s IPv6 se do prohlížeče zadává jako https://[2a02:123:45::101]  
 
 ### Problémy s IPv6  
 
