@@ -37,7 +37,7 @@ Zařízení může mít vícero IPv6 adres z různých Scopes, dokonce i několi
 Běžný [windows klient](/IPv6/IPv6-WinKlient.md) by měl mít GUA nebo ULA a pak vždy LLA + localhost.  
 
 ### Délka GUA prefixu (prefix lenght) který "vetšinou" dostanu od ISP
-/64 - pro malé sítě, typicky domácnosti s jednou sítí - nejhorší varianta  
+/64 - pro malé sítě, typicky domácnosti s jednou sítí - nejhorší varianta a potřeba se jí vyhnout  
 /60 - slušný ISP, lze mít 16 podsítí délky /64  
 /56 - pro větší sítě (firmy), lze mít 256 podsítí délky /64  
 /48 - velmi štedrý ISP  
@@ -69,7 +69,7 @@ Static - Fixní Adresy
 
  > :warning:Pozor při pokusech s routerem a použitím windows 11 klienta, ten když dostane IPv6 přes DHCP a změníte nastavení DHCP, tak toto může klient ignorovat (po přepojení síťovky). Pak pomůže [ipconfig /renew6](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig) nebo restart OS. A je to ještě horší když přepnete Router Advertisement (z Stateful DHCPv6 na Stateless DHCPv6), tak i po restartu může stále ukazovat IPv6 kterou předtím dostal z DHCP.  
  
-Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6).
+Pomocí funkce Prefix delegation / [DHCPv6-PD](https://en.wikipedia.org/wiki/Prefix_delegation) umí ISP router předat informaci o síťovém prefixu do routeru zákazníka, který jej pak přidělí zařízením ve své síti (buď přes SLAAC a nebo DHCPv6). V tomto modu se typicky stává, že WAN interface dostane jen LLA a adresy z přiděleného prefixu má jen LAN. Současně i LAN klient mívá bránu doustupnou jen přes LLA adresu.  
 
 
 ### Testování, užitečné odkazy 
