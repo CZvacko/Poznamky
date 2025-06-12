@@ -4,7 +4,7 @@ V Network-Interfaces již existuje wan6 interface, kde přes Edit lze přenastav
 Už v tuto chvíli dokáže router komunikovat přes IPv6 (ověřím si přes Network-Diagnostics IPv6 Ping openwrt.org).  
 
 Zbývá nastavit toto:  
-> Doporučuje se vypnout užití IPv6 ULA adresy, Network-Interfaces-Global network options, IPv6 ULA-Prefix - smažu dané pole
+> Doporučuje se vypnout užití IPv6 ULA adresy (jinak může mít win klient až 5 adres: 2xGUA a 3xULA) , Network-Interfaces-Global network options, IPv6 ULA-Prefix - smažu dané pole
   
 > Volitelně lze upravit IPv6 assignment lenght+hint uvnitř LAN interface
   
