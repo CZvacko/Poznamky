@@ -6,7 +6,9 @@ Už v tuto chvíli dokáže router komunikovat přes IPv6 (ověřím si přes Ne
 Zbývá nastavit toto:  
 > Doporučuje se vypnout užití IPv6 ULA adresy (jinak může mít win klient až 5 adres: 2xGUA a 3xULA) , Network-Interfaces-Global network options, IPv6 ULA-Prefix - smažu dané pole
   
-> Volitelně lze upravit IPv6 assignment lenght+hint uvnitř LAN interface
+> Uvnitř LAN interface upravit IPv6 assignment lenght podle toho jaký rozsah je k dispozici, popř jak byl rozsah rozdělen  
+
+> Pokud je použito více LAN interface (např Guest), tak pro každý upravit IPv6 assignment hint  
   
 > V LAN-advanced vypnout Use default gateway, naopak u WAN má být zapnuté  
 
