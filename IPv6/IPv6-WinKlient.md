@@ -27,6 +27,37 @@ LLA>Link-local IPv6 Address . . . . . : fe80::9124:9085:90f6:6411%5(Preferred)
                                         10.90.1.1  
     NetBIOS over Tcpip. . . . . . . . : Enabled  
 ```
+### Windows klient s mnoha GUA a ULA adresami
+Výchozí stav v [OpenWrt](/IPv6/OpenWrt-nastaveni.md) když se nevypne užití IPv6 ULA adresy. 
+```console
+    Connection-specific DNS Suffix  . : lan
+    Description . . . . . . . . . . . : Intel(R) Wi-Fi 6E AX211 160MHz
+    Physical Address. . . . . . . . . : E8-C8-29-22-22-20
+    DHCP Enabled. . . . . . . . . . . : Yes
+    Autoconfiguration Enabled . . . . : Yes
+GUA>IPv6 Address. . . . . . . . . . . : 2a02:570:90f:181:9954:24f6:eb5:2e02(Preferred)  
+ULA>IPv6 Address. . . . . . . . . . . : fd77:b3bb:2c7c::ca3(Preferred)  
+    Lease Obtained. . . . . . . . . . : čtvrtek 12. června 2025 12:58:47  
+    Lease Expires . . . . . . . . . . : pátek 13. června 2025 0:58:47  
+ULA>IPv6 Address. . . . . . . . . . . : fd77:b3bb:2c7c:0:b3ee:1f95:f0e8:e82d(Preferred)  
+GUA>Temporary IPv6 Address. . . . . . : 2a02:570:90f:181:347e:c6dd:bb97:32e3(Preferred)  
+ULA>Temporary IPv6 Address. . . . . . : fd77:b3bb:2c7c:0:347e:c6dd:bb97:32e3(Preferred)  
+LLA>Link-local IPv6 Address . . . . . : fe80::15f7:43cc:cb7e:7b79%5(Preferred)  
+    IPv4 Address. . . . . . . . . . . : 192.168.1.189(Preferred)  
+    Subnet Mask . . . . . . . . . . . : 255.255.255.0  
+    Lease Obtained. . . . . . . . . . : čtvrtek 12. června 2025 12:58:50  
+    Lease Expires . . . . . . . . . . : pátek 13. června 2025 0:58:49  
+    Default Gateway . . . . . . . . . : fe80::abf:b8ff:fee7:a8d8%5  
+                                        192.168.1.1  
+    DHCP Server . . . . . . . . . . . : 192.168.1.1  
+    DHCPv6 IAID . . . . . . . . . . . : 199804969  
+    DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2F-6C-45-87-10-7C-61-04-E8-7A  
+    DNS Servers . . . . . . . . . . . : fd77:b3bb:2c7c::1  
+                                        192.168.1.1  
+                                        fd77:b3bb:2c7c::1  
+    NetBIOS over Tcpip. . . . . . . . : Enabled  
+```
+  
 ### Windows klient s jedinou GUA adresou  
 Na síti je aktivní jen DHCPv6, bez SLAAC a nebo je délka prefixu jiná než 64 - to pak SLAAC nefunguje.  
 ```console
