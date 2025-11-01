@@ -145,3 +145,5 @@ Dříve se hostitelská část GUA adresy (Interface ID) generovalo dle MAC adre
   
 Nebo pomocí příkazu *Set-NetIPv6Protocol -RandomizeIdentifiers Disabled*  
 Není potřeba restart OS, jen se znovu připojit k síti.  
+
+Zde je okaz na [EUI-64 kalkulator](https://eui64-calc.princelle.org)  
