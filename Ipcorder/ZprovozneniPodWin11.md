@@ -1,3 +1,4 @@
+> How to use the Ipcorder NVR on Windows 11
 ### Krok č.1: Instalace Javy  
 Je potřeba naistalovat Windows Offline (to znamená 32-bit verzi) [odtud](https://www.java.com/en/download/manual.jsp)  
 
