@@ -26,7 +26,13 @@ LLA>Link-local IPv6 Address . . . . . : fe80::9124:9085:90f6:6411%5(Preferred)
     DNS Servers . . . . . . . . . . . : 2a02:570:90f:181::1
                                         10.90.1.1  
     NetBIOS over Tcpip. . . . . . . . : Enabled  
-```
+```  
+Pokud se nastaví statická IPv6 adresa, OS stále může dostat další adresu přes DHCPv6 a nebo SLAAC. Fixní je pak použita jen pro příchozí spojení, pro odchozí spojení se pak použije adresa dle pořadí viz níže, na to je potřeba myslet pokud je klient za (default block) firewalem kde je potřeba povolit tu správnou.   
+1. Dočasná adresa (tu bych měl deaktivovat)  
+2. DHCPv6 adresa (tu bych měl rezervovat)  
+3. SLAAC adresa (měl bych vypnout Random Interface Identifier)  
+4. Statická adresa  
+
 ### Windows klient s mnoha GUA a ULA adresami
 Výchozí stav v [OpenWrt](/IPv6/OpenWrt-nastaveni.md) když se nevypne užití IPv6 ULA adresy. 
 ```console
