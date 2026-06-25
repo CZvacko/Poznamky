@@ -2,6 +2,7 @@
 > Jak rozjet Ipcorder NVR pod Windows 11  
 ### Krok č.1: Instalace Javy  
 Je potřeba naistalovat Windows Offline (to znamená 32-bit verzi) [odtud](https://www.java.com/en/download/manual.jsp)  
+Poslední verze se kterou mi to fungovalo je jre-8u471. S dalšími jako jre-8u481 a jre-8u491 měl IE problém.  
 
 ### Krok č.2: Nastavení Javy  
 Zadat IP adresu rekordéru do Exception Site List
